@@ -6,6 +6,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestHeader;
 
 
 @FeignClient(name="pokeApi", url = "https://pokeapi.co/api/v2/pokemon/", configuration = FeignSimpleEncoderConfig.class)
@@ -14,6 +15,6 @@ public interface PokeApiClientRest {
     @GetMapping(value ={"{name}"},
             consumes = {MediaType.APPLICATION_JSON_VALUE},
             produces = {MediaType.APPLICATION_JSON_VALUE})
-    PokemonResponse getPokemon(@PathVariable("name") String name);
+    PokemonResponse getPokemon(@RequestHeader(value = "User-Agent") String userAgent, @PathVariable("name") String name);
 
 }

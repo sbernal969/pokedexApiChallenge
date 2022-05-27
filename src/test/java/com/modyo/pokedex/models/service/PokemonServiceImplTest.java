@@ -49,7 +49,8 @@ class PokemonServiceImplTest {
 
     @Test
     void getPokemon() throws Exception {
-        when(pokeApiClientRest.getPokemon("2")).thenReturn(pokemonResponse);
+        String userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36";
+        when(pokeApiClientRest.getPokemon(userAgent,"2")).thenReturn(pokemonResponse);
         assertNotNull(pokemonService.getPokemon("2"));
     }
 }
