@@ -1,6 +1,10 @@
 # pokedexApiChallenge
 Consumo de PokeApi y exposición de endPoint para busqueda de descripcion basica de Pokemon por nombre o id
 
+# Plataforma de despliegue
+
+Heroku 
+
 # EndPoint
  https://pokedex-challenge-modyo.herokuapp.com/v1/pokedex/getPokemonByName/{nameOrId}
 # Method
