@@ -1,2 +1,0 @@
-feign.compression.response.enabled=true
-feign.compression.response.useGzipDecoder=true
