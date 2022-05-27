@@ -9,7 +9,7 @@ Heroku
  https://pokedex-challenge-modyo.herokuapp.com/v1/pokedex/getPokemonByName/{nameOrId}
 # Method
  Get
-# Required Autentication
+# Required Authentication
  No
 # Response
 code: Codigo respuesta Http  
